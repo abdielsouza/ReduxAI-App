@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 6543:6543
+    environment: 
+      POSTGRES_USER: postgres.czikcpmoqtastlhkqqfd
+      POSTGRES_PASSWORD: ReduxAgent@2745
+      POSTGRES_DB: aws-0-sa-east-1.pooler.supabase.com
+  external:
+    container_name: redux_ai
+    # The name of the image that will be created when building this container
+    image: redux-ai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: "node"
+    environment:
+      # Internal server error messages will not send stacktrace to the browser in production
+      - NODE_ENV=production
+      # Sets the timezone of the containers OS
+      - TZ=Brazil/East
+    # Points to a file with the sensitive environment variables
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - 5050:80
+    labels:
+      # Stops watchtower from updating this container
+      - "com.centurylinklabs.watchtower.enable=false"
+
+# Tells docker to use an IP from this range when creating this containers network. Important to avoid IP conflicts on your network.
+# Can be done globally with a setting in docker. 
+networks:
+  external:
+    driver: default
+    ipam:
+      config:
+        - subnet: "172.20.0.0/16"
