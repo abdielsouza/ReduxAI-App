@@ -8,7 +8,6 @@
 
     scale: 1;
     box-shadow: 0 0 2px #dc10fb, 0 0 3px 2px #b915de;
-    box-sizing: border-box;
   }
 
   .integration-card:hover {

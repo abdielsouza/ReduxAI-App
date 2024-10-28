@@ -3,6 +3,7 @@
     import { Sheet, SheetContent, SheetTrigger } from "$lib/components/ui/sheet";
     import Icon from "@iconify/svelte";
     import Integrations from "$lib/components/Integrations.svelte";
+    import Styles from "$lib/components/Styles.svelte";
     import Data from "$lib/components/Data.svelte";
 
     let activeTab = 'integrações';
@@ -58,8 +59,7 @@
         <h3 class="text-2xl font-semibold">Conta</h3>
         <p>Conteúdo sobre conta...</p>
         {:else if activeTab === 'aparência'}
-        <h3 class="text-2xl font-semibold">Aparência</h3>
-        <p>Conteúdo sobre aparência...</p>
+        <Styles/>
         {:else if activeTab === 'contatos'}
         <h3 class="text-2xl font-semibold">Contatos</h3>
         <p>Conteúdo sobre contatos...</p>
