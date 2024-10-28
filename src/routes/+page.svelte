@@ -32,8 +32,8 @@
             <SheetTrigger>
                 <Icon icon="bx:menu" class="text-[32px]" />
             </SheetTrigger>
-            <SheetContent dir="ltr" class="w-64 bg-dark-purple p-4 border-r-2 border-r-[#cc22e0]">
-                <nav>
+            <SheetContent dir="ltr">
+                <nav class="w-64 bg-dark-purple p-4 border-r-2 border-r-[#cc22e0] text-[#db55f3]">
                     <h2 class="text-xl font-bold mb-4">Dashboard</h2>
                     <ul>
                     {#each tabs as tab}

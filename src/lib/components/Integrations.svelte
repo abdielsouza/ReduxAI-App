@@ -16,9 +16,9 @@
     ];
 </script>
 
-<div class="flex flex-col p-4 space-y-10">
+<div class="flex flex-col p-4 space-y-10 h-screen overflow-y-scroll">
     <h1 class="text-lg font-semibold">Suas integrações</h1>
-    <div class="mx-auto grid grid-flow-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
+    <div class="mx-auto h-full grid grid-flow-row lg:grid-flow-col grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4">
         {#each integrations as integration}
             <Card class="integration-card">
                 <CardHeader class="flex flex-row justify-start space-x-4 items-center">

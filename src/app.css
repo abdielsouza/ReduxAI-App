@@ -4,7 +4,7 @@
 
 @layer utilities {
   .integration-card {
-    @apply rounded-xl border w-[300px] h-[300px] bg-[#27222d] transition-all;
+    @apply rounded-xl border w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] bg-[#27222d] transition-all;
 
     scale: 1;
     box-shadow: 0 0 2px #dc10fb, 0 0 3px 2px #b915de;
