@@ -2,8 +2,8 @@
     
     import { Sheet, SheetContent, SheetTrigger } from "$lib/components/ui/sheet";
     import Icon from "@iconify/svelte";
-    import Integrations from "./Integrations.svelte";
-    import Data from "./Data.svelte";
+    import Integrations from "$lib/components/Integrations.svelte";
+    import Data from "$lib/components/Data.svelte";
 
     let activeTab = 'integrações';
     const tabs = ['integrações', 'conta', 'aparência', 'contatos', 'dados'];
